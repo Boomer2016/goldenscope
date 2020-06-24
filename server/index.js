@@ -61,7 +61,6 @@ app.use(async (ctx, next) => {
   }
 
   // if (/^\/assets/.test(ctx.url)) {
-
   //   return next();
   // }
 
