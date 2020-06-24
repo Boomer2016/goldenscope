@@ -17,7 +17,7 @@ module.exports = {
   },
   rules: {
     /**
-     * 
+     *
      * 基础规则
      */
     // 禁止使用 console
@@ -26,7 +26,7 @@ module.exports = {
     'valid-jsdoc': 'error',
 
     /**
-     * 
+     *
      * 最佳实践的规则, 比较严格
      */
     // 强制 getter/setter 成对出现在对象中
@@ -55,7 +55,7 @@ module.exports = {
      *    console.log('hi')
      *  }
      * }
-     * 
+     *
      * class B {
      *  static renderCommon() {
      *    return (
@@ -63,14 +63,14 @@ module.exports = {
      *    )
      *  }
      * }
-     * 
+     *
      */
     'class-methods-use-this': 'off',
     /**
      * 与 null 进行比较使用全等比较
      * 错误示例
      * undefined == null
-     * 
+     *
      * 正确示例
      * undefined === null
      * if (foo === null) {
@@ -99,7 +99,7 @@ module.exports = {
      *    a()
      *  case 2:
      *    b()
-     * 
+     *
      * 正确示例
      * switch(foo) {
      *  case 1:
@@ -122,7 +122,7 @@ module.exports = {
      * 错误示例
      * return foo = bar + 2
      * return foo == bar + 2
-     * 
+     *
      * 正确示例
      * return (foo = bar + 2)
      */
@@ -137,21 +137,21 @@ module.exports = {
     'vars-on-top': 'error',
 
     /**
-     * 
+     *
      * 与变量声明有关的规则
      */
     // 禁止申明变量后却不使用
     'no-unused-vars': ['warn', {
-      vars: 'all', 
-      args: 'after-used', 
-      ignoreRestSiblings: false, 
+      vars: 'all',
+      args: 'after-used',
+      ignoreRestSiblings: false,
       caughtErrors: 'none',
     }],
     // 禁止定义前使用
     'no-use-before-define': 'warn',
 
     /**
-     * 
+     *
      * 代码风格相关的规则, 很主观, 可随自我以及项目自身修改
      */
     // 每个缩进级别由 2 个空格组成, 而不是使用 tab
@@ -172,7 +172,7 @@ module.exports = {
      * 要求函数名与赋值给它们的变量名或属性名相匹配
      * 错误示例
      * const foo = function bar() {}
-     * 
+     *
      * 正确示例
      * const foo = function foo() {}
      */
@@ -181,12 +181,12 @@ module.exports = {
      * 限制函数定义中最大参数个数
      * 错误示例
      * function foo (a, b, c, d) {
-     *  
+     *
      * }
-     * 
+     *
      * 正确示例
      * function foo ({a, b, c, d}) {
-     *  
+     *
      * }
      */
     'max-params': ['warn', {
@@ -237,7 +237,7 @@ module.exports = {
      * 正确示例
      * const a = {b: 'c'}
      */
-    'object-curly-spacing': ['error', 'never'],
+    'object-curly-spacing': 'off',
     /**
      * 类成员间需要空行来提高可读性
      * 有时候值的定义并不希望有空行, 比如两个 observable 值之间
@@ -245,13 +245,13 @@ module.exports = {
     'lines-between-class-members': 'off',
 
     /**
-     * 
+     *
      * ES2015
      */
     /**
      * 箭头函数的函数体句法形式
      * 保留原本的结构, 函数体内只有一条语句的时候也可能代表以后会往里面添加新的代码
-     * 
+     *
      * 正确示例
      * () => {}
      * () => a = 1
@@ -270,7 +270,7 @@ module.exports = {
      * 错误示例
      * import {a} from 'module'
      * import {b} from 'module'
-     * 
+     *
      * 正确示例
      * import {a, b} from 'module'
      */
@@ -278,7 +278,7 @@ module.exports = {
       /**
        * 错误示例
        * export {a} from 'module'
-       * 
+       *
        * 正确示例
        * import {a, b} from 'module'
        * export {a, b}
@@ -295,7 +295,7 @@ module.exports = {
      * 错误示例
      * const foo = array[0]
      * const bar = a.b
-     * 
+     *
      * 正确示例
      * const [foo] = array
      * const {bar} = a
@@ -306,7 +306,7 @@ module.exports = {
     }],
 
     /**
-     * 
+     *
      * eslint-plugin-jsx-a11y
      */
     // 禁止给 div, span 这类本身不具有事件的 dom 元素绑定事件, 拿 span 标签做按钮还是挺常见的
@@ -315,7 +315,7 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'off',
 
     /**
-     * 
+     *
      * eslint-plugin-import
      */
     // 禁止使用无关的包裹
@@ -328,7 +328,7 @@ module.exports = {
     'import/newline-after-import': 'error',
 
     /**
-     * 
+     *
      * eslint-plugin-react
      */
     // 禁止强制执行组件方式的顺序
